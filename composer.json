@@ -1,0 +1,41 @@
+{
+    "$schema": "https://getcomposer.org/schema.json",
+    "name": "funseco/muting-plugin",
+    "description": "Funseco muting — personal /mute lists and the global (server ignore) list",
+    "license": "MIT",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "^8.2",
+        "funseco/core": "@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Funseco\\Muting\\": "src/"
+        }
+    },
+    "extra": {
+        "funseco": {
+            "id": "muting",
+            "name": "Muting",
+            "description": "muting — personal /mute lists and the global (server ignore) list",
+            "provider": "Funseco\\Muting\\MutingServiceProvider"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "require-dev": {
+        "funseco/admin-plugin": "@dev",
+        "mockery/mockery": "^1.6",
+        "orchestra/testbench": "^10.0",
+        "phpunit/phpunit": "^11.5.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Funseco\\Muting\\Tests\\": "tests/"
+        }
+    }
+}
